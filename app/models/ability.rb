@@ -8,11 +8,11 @@ class Ability
 
     user ||= User.new #guest user (not logged in)
 
-    if user.admin?
-      can :manage, :all
-    else
-      can :read, :all
-    end
+    # if user.admin?
+    #   can :manage, :all
+    # else
+    #   can :read, :all
+    # end
 
 
     alias_action :create, :read, :update, :delete, :to => :crud
@@ -26,14 +26,14 @@ class Ability
     #   user == answer.user #|| answer.question.user
     # end
 
-    # can :like, Question do |question|
-    #   user.persisted? && question.user != user
-    # end
+    can :like, Business do |business|
+      user.persisted? && business.user != user
+    end
    
 
-    # can :destroy, Like do |like|
-    #   like.user == user
-    # end
+    can :destroy, Like do |like|
+      like.user == user
+    end
 
 
   end

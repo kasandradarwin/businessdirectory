@@ -12,6 +12,7 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/1 or /businesses/1.json
   def show
+    @like = @business.likes.find_by(user: current_user)
   end
 
   # GET /businesses/new
@@ -61,6 +62,10 @@ class BusinessesController < ApplicationController
       format.html { redirect_to businesses_url, notice: "Business was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def liked
+    @businesses = current_user.liked_businesses
   end
 
   private

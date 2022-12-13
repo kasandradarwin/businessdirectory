@@ -1,5 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="jumbotron">
+  <h1 class="display-4">Spotlight on: Matka Botanicals</h1>
+  <p class="lead">Matka Botanicals is a Vancouver Island based vegan beauty brand founded by Nicolina Kolster. </p>
+  <div class="container ">
+  <img class="card-img-top" src="https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/1644082542189-25LMY3FA0LEY87DI8GCO/product+sets+%281+of+2%29.jpg?format=750w
+" maxwidth="2000"alt="Card image cap">
+</div>
+  <hr class="my-4">
+  <p class="lead">
+    <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+<br />
+<br />
+<br />
+
 <h1>Businesses</h1>
 
 <div id="businesses">
@@ -7,7 +23,7 @@
     
 
     <div class="card text-center" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg" width="25px"alt="Card image cap">
   <div class="card-body">
      <h5 class="card-title"><%= business.business_name %></h5>
     <p class="card-text"> <%=business.one_liner%></p>
@@ -15,8 +31,7 @@
       <%= link_to "More info", business, class:"btn btn-dark" %>
   </div>
 </div>
-    <p>
-    </p>
+    
   <% end %>
 </div>
 
