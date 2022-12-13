@@ -4,11 +4,22 @@
 
 <div id="businesses">
   <% @businesses.each do |business| %>
-    <%= render business %>
+    
+
+    <div class="card text-center" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+     <h5 class="card-title"><%= business.business_name %></h5>
+    <p class="card-text"> <%=business.one_liner%></p>
+
+      <%= link_to "More info", business, class:"btn btn-dark" %>
+  </div>
+</div>
     <p>
-      <%= link_to "Show this business", business %>
     </p>
   <% end %>
 </div>
 
 <%= link_to "New business", new_business_path %>
+
+
