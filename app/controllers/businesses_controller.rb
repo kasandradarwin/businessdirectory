@@ -1,6 +1,10 @@
 class BusinessesController < ApplicationController
   before_action :set_business, only: %i[ show edit update destroy ]
 
+  before_action :authenticate_user!, except: [:index, :show]
+
+  before_action :authorize_user!, only:[:edit, :update, :destroy]
+
   # GET /businesses or /businesses.json
   def index
     @businesses = Business.all
@@ -22,6 +26,7 @@ class BusinessesController < ApplicationController
   # POST /businesses or /businesses.json
   def create
     @business = Business.new(business_params)
+    @business.user = current_user
 
     respond_to do |format|
       if @business.save
@@ -33,6 +38,7 @@ class BusinessesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /businesses/1 or /businesses/1.json
   def update
@@ -66,5 +72,9 @@ class BusinessesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def business_params
       params.require(:business).permit(:business_name, :category, :one_liner, :business_email, :business_phone, :description, :logo_url, :shop_online, :website)
+    end
+
+    def authorize_user!
+      redirect_to root_path, alert: "Not authorized!" unless can?(:crud, @business)
     end
 end
