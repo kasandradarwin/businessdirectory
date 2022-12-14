@@ -8,10 +8,16 @@ class BusinessesController < ApplicationController
   # GET /businesses or /businesses.json
   def index
     @businesses = Business.all
+    
+    # @likes = @business.likes.find_by(user: current_user)
+    # @like = @business.likes.find_by(user: current_user)
+    
+
   end
 
   # GET /businesses/1 or /businesses/1.json
   def show
+    # @likes = @business.likes.find_by(user: current_user)
     @like = @business.likes.find_by(user: current_user)
   end
 

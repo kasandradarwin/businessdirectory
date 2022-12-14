@@ -1,32 +1,39 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="jumbotron">
-  <h1 class="display-4">Spotlight on: Matka Botanicals</h1>
-  <p class="lead">Matka Botanicals is a Vancouver Island based vegan beauty brand founded by Nicolina Kolster. </p>
-  <div class="container ">
-  <img class="card-img-top" src="https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/1644082542189-25LMY3FA0LEY87DI8GCO/product+sets+%281+of+2%29.jpg?format=750w
-" maxwidth="2000"alt="Card image cap">
+  <h1 class="display-5">Spotlight on: Matka Botanicals</h1>
+  <div class="container-sm clearfix">
+  
+  <img class="card-img-top col-md-6 float-md-start mb-3 ms-md-3" src="https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/1644082542189-25LMY3FA0LEY87DI8GCO/product+sets+%281+of+2%29.jpg"
+style="max-width:200px" alt="Card image cap">
+<div class="container justify-center">
+  <p class="lead">Matka Botanicals is a Nanaimo based vegan beauty brand founded by Nicolina Kolster. Matka is the Finnish word for journey - a never ending journey to design, research, source, formulate, create and provide products you can trust and that are safe for you, your little ones, the animals, and the planet. We pride ourselves with environmental friendly packaging, recyclable materials where possible, cruelty-free practices, and petrolium free, ocean safe, and sustainably sourced ingredients. 1% of our monthly proceeds are donated to Humane Canada.</p>
+    <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
+ </div>   
 </div>
   <hr class="my-4">
-  <p class="lead">
-    <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
-  </p>
+ 
 </div>
 <br />
 <br />
 <br />
 
-<h1>Businesses</h1>
+<h1>Nanaimo Businesses</h1>
 
-<div id="businesses">
+
+
+
+<div class="businesses container-fluid ">
+  <div class="row row-cols-12 row-cols-md-6 row-cols-lg-4 justify-content-center">
   <% @businesses.each do |business| %>
     
 
     <div class="card text-center" style="width: 18rem;">
-  <img class="card-img-top" src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg" width="25px"alt="Card image cap">
+  <img class="card-img-top img-thumbnail" src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg" width="25px"alt="Card image cap">
   <div class="card-body">
      <h5 class="card-title"><%= business.business_name %></h5>
-    <p class="card-text"> <%=business.one_liner%></p>
+     <p class="card-text"> <%=business.category%> </p>
+    <p class="card-text"> <%=business.one_liner%> <p> <strong>Liked by:</strong> <%= business.likes.count %> <p></p>
 
       <%= link_to "More info", business, class:"btn btn-dark" %>
   </div>
@@ -34,7 +41,7 @@
     
   <% end %>
 </div>
+</div>
 
-<%= link_to "New business", new_business_path %>
 
 

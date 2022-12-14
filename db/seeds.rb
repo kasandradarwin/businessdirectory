@@ -1,4 +1,4 @@
-# Like.destroy_all
+Like.destroy_all
 # Tagging.destroy_all
 # Tag.destroy_all
 # Question.destroy_all
@@ -29,7 +29,7 @@ end
 
 users = User.all
 
-50.times do
+10.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
     created_at = Faker::Date.backward(days: 365 * 5)
@@ -46,8 +46,10 @@ users = User.all
         website: "www.#{business_name}.com",
         created_at: created_at,
         updated_at: created_at,
-        user: users.sample
+        user: users.sample, 
     )
+
+    b.likers = users.shuffle.slice(0, rand(users.count))
 end
 
 businesses = Business.all
