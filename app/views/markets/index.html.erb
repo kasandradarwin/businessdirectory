@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+  <h1>Markets</h1>
+  <div id="markets">
+  <%= month_calendar(events: @markets) do |date, markets|%>
+    <div class="day">
+     <%=date.day %>
+    </div>
+
+  <% @markets.each do |market| %>
+  <div class="card-header">
+    <div class="card-title">
+      <%= link_to market.title, market %>
+    </div>
+  </div>
+  
+    <%end%>
+  <%end%>
+
+
+
+<%= link_to "New market", new_market_path %>

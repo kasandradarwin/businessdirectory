@@ -21,6 +21,7 @@
     <ul class="navbar-nav mr-auto">
        
 <%= link_to "Home", root_path, class: "nav-item nav-link" %>
+ <%= link_to "Upcoming Markets", markets_path, class: "nav-item nav-link" %>
         
   <% if user_signed_in? %>
         <%= link_to "Add your business", new_business_path, class: "nav-item nav-link" %>
