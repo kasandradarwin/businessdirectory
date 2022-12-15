@@ -9,6 +9,9 @@ class BusinessesController < ApplicationController
   def index
     @businesses = Business.all
     
+      @q = Business.ransack(params[:q])
+      @business = @q.result(distinct: true)
+    
     # @likes = @business.likes.find_by(user: current_user)
     # @like = @business.likes.find_by(user: current_user)
     

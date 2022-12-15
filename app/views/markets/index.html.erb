@@ -1,22 +1,27 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-  <h1>Markets</h1>
-  <div id="markets">
-  <%= month_calendar(events: @markets) do |date, markets|%>
-    <div class="day">
-     <%=date.day %>
-    </div>
+  <h1>Upcoming Markets</h1>
 
-  <% @markets.each do |market| %>
-  <div class="card-header">
-    <div class="card-title">
+  <br />
+
+<%= link_to "New market", new_market_path, class:"float-right btn btn-dark" %>
+ <br />
+  <small> Check out the calendar below for upcoming farmers markets, craft fairs, and more! </small>
+<br />
+<br />
+<%= month_calendar(events: @markets) do |date, markets| %>
+  <%= date.day %>
+
+  <% markets.each do |market| %>
+    <div>
       <%= link_to market.title, market %>
     </div>
-  </div>
-  
-    <%end%>
-  <%end%>
+  <% end %>
+<% end %>
+</div>
 
 
 
-<%= link_to "New market", new_market_path %>
+
+
