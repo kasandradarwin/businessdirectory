@@ -8,9 +8,12 @@ class BusinessesController < ApplicationController
   # GET /businesses or /businesses.json
   def index
     @businesses = Business.all
+      #  @keyword = params[:q].values[0]
+        @q = Business.ransack(params[:q])
+        @businesses = @q.result(distinct: true)
     
-      @q = Business.ransack(params[:q])
-      @business = @q.result(distinct: true)
+      # @q = Business.ransack(params[:q])
+      # @businesses = @q.result.includes(:businesses).page(params[:page])
     
     # @likes = @business.likes.find_by(user: current_user)
     # @like = @business.likes.find_by(user: current_user)

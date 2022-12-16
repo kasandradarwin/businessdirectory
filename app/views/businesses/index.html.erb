@@ -2,27 +2,24 @@
 <p style="color: green"><%= notice %></p>
 <div class="container">
 
-<div class="jumbotron">
-  <h1 class="display-5">Spotlight on: Matka Botanicals</h1>
-  <div class="container-sm clearfix">
-  
-  <img class="card-img-top col-md-6 float-md-start mb-3 ms-md-3" src="https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/1644082542189-25LMY3FA0LEY87DI8GCO/product+sets+%281+of+2%29.jpg"
-style="max-width:200px" alt="Card image cap">
-<div class="container justify-center">
-<div class="container">
-  <p class="lead">Matka Botanicals is a Nanaimo based vegan beauty brand founded by Nicolina Kolster. Matka is the Finnish word for journey - a never ending journey to design, research, source, formulate, create and provide products you can trust and that are safe for you, your little ones, the animals, and the planet. We pride ourselves with environmental friendly packaging, recyclable materials where possible, cruelty-free practices, and petrolium free, ocean safe, and sustainably sourced ingredients. 1% of our monthly proceeds are donated to Humane Canada.</p>
-    <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
-    </div>
- </div>   
-</div>
-  <hr class="my-4">
- 
-</div>
-<br />
-<br />
-<br />
+<% if %>
+<%= render "spotlight", business: @business %>
+<% end %>
+
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :business_name_or_description_or_category_cont %>
+  <%= f.search_field :business_name_or_description_or_category_cont %>
+  <%= f.submit %>
+<% end %>
 
 <h1>Nanaimo Businesses</h1>
+
+      <h6><%= sort_link(@q, :category, "Category", default_order: :asc) %></h6>
+      <h6><%= sort_link(@q, :business_name, "Business Name", default_order: :asc) %></h6>
+      <h6><%= sort_link(@q, :likes, "Number of Likes", default_order: :desc) %></h6>
+    
+
 
 
 
@@ -33,7 +30,7 @@ style="max-width:200px" alt="Card image cap">
     
 
     <div class="card text-center" style="width: 18rem;">
-  <img class="card-img-top img-thumbnail" src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg" width="25px"alt="Card image cap">
+  <img class="card-img-top img-thumbnail" src="<%= business.logo_url %>" width="25px"alt="Card image cap">
   <div class="card-body">
      <h5 class="card-title"><%= business.business_name %></h5>
      <p class="card-text"> <%=business.category%> </p>
