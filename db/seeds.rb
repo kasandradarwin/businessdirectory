@@ -71,7 +71,7 @@ users = User.all
 
     {
         business_name: "Wild Chocolate Tree",
-        category: "Food",
+        category: "food",
         one_liner: "Small-batch craft chocolate",
         business_email: "kasandradarwin@gmail.com",
         business_phone: "8795309",
@@ -200,7 +200,7 @@ users = User.all
     {
         business_name: "Promise Valley Farm",
         category: "food",
-        one_liner: "farm and creamey making yogurt and cheese",
+        one_liner: "farm and creamery making yogurt and cheese",
         business_email: "info@promisevalleyfarm.ca",
         business_phone: "8675309",
         description: "
@@ -232,6 +232,92 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/0531/4369/9646/files/Westwood_Logotype_-_White_200px-03.png?v=1634249482",
+    },
+    {
+        business_name: "Drumroaster Coffee",
+        category: "food",
+        one_liner: "locally roasted and packages coffee",
+        business_email: "kasandradarwin@gmail.com",
+        business_phone: "8675309",
+        description: "The Oglend family has been involved in the coffee industry for a really, really long time. Geir installed his first espresso machine in 1972, making our collective time involved with coffee around 70 years. Geir continued in the industry, owning a number of cafes and learning to expertly repair espresso machines and successfully build sustainable, community-focused, vibrant businesses. Carsen and Courtney both grew up working in cafes and today, have expanded their knowledge into different facets of Drumroaster Coffee. Carsen has evolved from a cruise ship/session musician into a coffee roaster, focusing on ethically sourcing and purchasing exceptionally nice coffees. Courtney, after some years in University, decided she preferred teaching over taking notes and now conducts all of our barista training programmes. Patricia works furtively behind the scenes, perfecting recipes for the treats to go with your coffee and keeping everyone efficiently organized.
+
+        Last but certainly not least is local fly-fishing celebrity, Andy, whose organizational prowess in our roastery, friendliness, and beard, rounds out our management team.
+        
+        Our mission today is to provide you with really great coffee.",
+        shop_online: true,
+        website: "https://www.drumroaster.com/coffees",
+        created_at: created_at,
+        updated_at: created_at,
+        user: users.sample, 
+        logo_url: "https://images.squarespace-cdn.com/content/v1/551b257ee4b072084061481f/1585604321862-QDISHN74NPLUP6TWVQ2M/spromo.png?format=1000w",
+    },
+
+    {
+        business_name: "Huddy Buddies",
+        category: "clothing",
+        one_liner: "Handmade soft sole slippers made with mom and baby in mind. ",
+        business_email: "kasandradarwin@gmail.com",
+        business_phone: "8675309",
+        description: "Every mother knows that when you first have a baby they sleep a lot. I have a really hard time sitting still so I thought I would start up a hobby. While my new baby Hudson slept I began to teach myself how to crochet. Soon enough winter rolled around and I was on the search for an easy way to keep my little guy's feet warm. I made my first pair of crochet slippers which I was complimented on and continually asked where I had bought them. When I informed mothers that I had made them they told me I should start selling them...so I took my first order and Huddy Buddies was started. ",
+        shop_online: true,
+        website: "https://www.huddybuddies.com/",
+        created_at: created_at,
+        updated_at: created_at,
+        user: users.sample, 
+        logo_url: "https://static.wixstatic.com/media/a4386e_f9b402b4b13e4049b791d185a47799ca~mv2.png/v1/fill/w_446,h_258,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/HUDDY-buddies-blk-frame.png",
+    },
+    
+    {
+        business_name: "Island Fresh Authentic Mexican",
+        category: "food",
+        one_liner: "Island handmade sauces, inspired by authentic Mexican recipes.",
+        business_email: "admin@islandersfreshauthenticmexican.com",
+        business_phone: "778-269-2922",
+        description: "I am Lily Rechon-Reguet, I am a Canadian citizen with a Mexican background. I moved from Mexico to Vancouver in 2006 at 24 years old. In Vancouver, I studied as a Web Designer and System Developer at BCIT and worked in the food industry. Married to a lovely French guy Thierry, I had the opportunity to live and work in the food industry in France for three years, where I learned new food processing techniques.
+
+        In Mexico, I went to the University of Industrial Engineering. I had the opportunity to work for 6 years in a candy factory; which involved the development of new products, also the production and sales department as part of the team.
+        
+        When I returned from France, I discovered that many people had a desire for Mexican food. Then I decided to make my line of fresh Mexican salsas that allows people to create their dishes with a Mexican taste. At this moment Islanders Fresh Authentic Mexican Sauce has been born. Our family business is based on making and selling fresh, traditional salsas, using authentic traditional Mexican recipes with fresh whole food and local ingredients. Keeping the salsas free of Chemicals, Gluten, Dairy, Artificial flavours, and Colours, MSG, and no sugar added. Giving to our consumers a healthy, 100% authentic and unique Mexican taste.
+        
+        If you can't visit Mexico now, I invite you to have a little piece of Mexico on your plate. Enjoy!",
+        shop_online: true,
+        website: "https://islandersfreshauthenticmexican.com/",
+        created_at: created_at,
+        updated_at: created_at,
+        user: users.sample, 
+        logo_url: "https://cdn.shopify.com/s/files/1/0578/6396/2796/files/7df6c0_b8d5ee190f7e404aa930ea69d0f6132b_mv2_d_5400_5400_s_4_2.png?v=1627356694",
+    },
+    {
+        business_name: "Woodfire Spice",
+        category: "food",
+        one_liner: "Natural, small batch, quality spices",
+        business_email: "sharon@woodfirespice.ca",
+        business_phone: "250 247 0095",
+        description: "Woodfire Spice.Ca
+        was born out of a passion for blending individual flavours together to create easy to use spice blends for everyday use.
+        
+        Why Woodfire?
+        What we believe sets our spices apart from the rest is the 40 years of chef experience that has created them.
+        We receive excellent feedback from customers who say our spices are in a class of their own.
+        
+        Quality Assured
+        Only top quality ingredients are used in our spice blends.
+        
+        Small Batch Production
+        Spices are hand-blended in small batches to ensure quality and freshness.
+        
+        Freshness Preserved
+        Our spices are packed and sealed in aluminum tins to protect them from exposure to sunlight,
+        often the cause of most damage to spices.
+        
+        All Natural
+        All of our blends are gluten-free with no msg, additives, preservatives or fillers.",
+        shop_online: true,
+        website: "https://www.woodfirerestaurant.ca/woodfire-spice/",
+        created_at: created_at,
+        updated_at: created_at,
+        user: users.sample, 
+        logo_url: "https://www.woodfirerestaurant.ca/wp-content/uploads/2022/11/woodfire_spices_logo_cmyk-300x300.png",
     },
 
     
