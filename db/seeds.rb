@@ -318,9 +318,27 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://www.woodfirerestaurant.ca/wp-content/uploads/2022/11/woodfire_spices_logo_cmyk-300x300.png",
-    },
 
-    
+    },
+    {
+        business_name: "Yeshi Dressing",
+        category: "food",
+        one_liner: "delicious, small batch, gluten-free nutritional yeast salad dressing",
+        business_email: "admin@yeshidressing.com",
+        business_phone: "8675309",
+        description: "Community and family are very important to us at Yeshi. We currently make and distribute Yeshi from a small community on Vancouver Island, Canada. Most of our staff started as customers who love our products and wanted to be part of the Yeshi community. Our brand is inclusive, conscious of allergies, the environment, and our community.
+
+        It’s important to us to be part of the greater good.
+        
+        ",
+        shop_online: true,
+        website: " https://yeshidressing.com/products/original-dressing/",
+        created_at: created_at,
+        updated_at: created_at,
+        user: users.sample, 
+        logo_url: "https://yeshidressing.com/wp-content/uploads/2021/08/logo-green.svg",
+
+    },
 ])
 
     # b.likers = users.shuffle.slice(0, rand(users.count))
