@@ -1,11 +1,40 @@
 <p style="color: green"><%= notice %></p>
 
+<h3><%= @market.title %> </h3>
 
-<%= render @market %>
+<br />
+<strong>About this market </strong><br /><%= @market.description %>
+<br />
+<br />
+<br />
+
+
+<div class="container clearfix border">
+  <div class="row">
+    <div class="col-4">
+
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item"><strong>Starts: </strong> <%= @market.start_time.strftime('%A, %B %d, %Y at %I:%M %p') %> PST</li>
+  <li class="list-group-item"><strong>Ends: </strong> <%= @market.end_time.strftime('%A, %B %d, %Y at %I:%M %p') %> PST</li>
+
+  <li class="list-group-item"><strong>Address: </strong><%= @market.address %></li>
+</ul>
+
+
+    </div>
+    <div class="col-8"><img src="https://tourismnanaimo.com/app/uploads/2018/03/map1.jpg" width="600"></div>
+
+  </div>
+</div>
+
+
+
+
+
 
 <div>
-  <%= link_to "Edit this market", edit_market_path(@market) %> |
-  <%= link_to "Back to markets", markets_path %>
+  <%= link_to "Back to markets", markets_path, class: 'btn btn-dark'  %>
 
-  <%= button_to "Destroy this market", @market, method: :delete %>
+   <% button_to "Destroy this market", @market, method: :delete%>
+  <% link_to "Edit this market", edit_market_path(@market) %> 
 </div>

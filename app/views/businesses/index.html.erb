@@ -13,11 +13,13 @@
   <%= f.submit %>
 <% end %>
 
-<h1>Nanaimo Businesses</h1>
 
-      <h6><%= sort_link(@q, :category, "Category", default_order: :asc) %></h6>
-      <h6><%= sort_link(@q, :business_name, "Business Name", default_order: :asc) %></h6>
-      <h6><%= sort_link(@q, :likes, "Number of Likes", default_order: :desc) %></h6>
+
+<h1>Nanaimo Businesses</h1>
+  <span> Sort by:  </span>
+    <span><%= sort_link(@q, :category, "Category", default_order: :asc) %></span> <span> |  </span>
+     <span><%= sort_link(@q, :business_name, "Business Name", default_order: :asc) %> </span>
+     <span> |  </span> <span><%= sort_link(@q, :likes, "Number of Likes", default_order: :desc) %></span>
     
 
 

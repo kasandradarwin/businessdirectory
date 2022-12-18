@@ -1,9 +1,6 @@
 Like.destroy_all
-# Tagging.destroy_all
-# Tag.destroy_all
-# Question.destroy_all
-# Answer.destroy_all
 User.destroy_all
+Market.destroy_all
 
 PASSWORD = "password123"
 
@@ -39,8 +36,7 @@ users = User.all
         category: "skincare",
         one_liner: "Handmade luxury skincare",
         business_email: "info@matkabotanicals.com",
-        business_phone: "2506405224
-        ",
+        business_phone: "2506405224",
         description: "Matka Botanicals is a Vancouver Island based vegan beauty brand founded by Nicolina Kolster, dedicated to providing clean and cruelty free solutions to the beauty market while actively defending animal rights through education, awareness, and monthly donations. 
 
         At Matka we religiously believe in a simplified skincare routine with fast-acting and long-lasting results. Our products are vegan, cruelty-free, and made with love and care in small batches with high performing and 100% plant-based ingredients. We love playing scientists with everything nature has to offer, creating original formulas from scratch, tested on real people - never animals!
@@ -88,6 +84,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://images.squarespace-cdn.com/content/v1/5df1c95f7cfa163022afff02/1577593626891-1471W9F1AWTJB27L6D8L/Copy%2Bof%2BWild.jpg",
+        
     },
 
     {
@@ -339,6 +336,79 @@ users = User.all
         logo_url: "https://yeshidressing.com/wp-content/uploads/2021/08/logo-green.svg",
 
     },
+])
+
+
+Market.create([{
+
+    title: "Commercial Street Night Market",
+    description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+    The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+    
+    This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+    
+    We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+    
+    The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+    address: "Commerical Street",
+    start_time: "Thu, 22 Dec 2022 16:00:00.000000000 UTC +00:00",
+    end_time: "Fri, 23 Dec 2022 16:00:00.000000000 UTC +00:00",
+       
+},
+{
+
+title: "Downtown Weekend Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Fri, 23 Dec 2022 16:00:00.000000000 UTC +00:00",
+end_time: "Sun, 25 Dec 2022 16:00:00.000000000 UTC +00:00",
+   
+},
+{
+
+title: "Monday Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Mon, 26 Dec 2022 16:00:00.000000000 UTC +00:00",
+    end_time: "Mon, 26 Dec 2022 19:00:00.000000000 UTC +00:00",
+   
+},
+{
+
+title: "Mid-Week Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Wed, 28 Dec 2022 16:00:00.000000000 UTC +00:00",
+end_time: "Wed, 28 Dec 2022 19:00:00.000000000 UTC +00:00",
+   
+},
+
+
 ])
 
     # b.likers = users.shuffle.slice(0, rand(users.count))
