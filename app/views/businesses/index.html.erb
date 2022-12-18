@@ -35,7 +35,7 @@
   <img class="card-img-top img-thumbnail" src="<%= business.logo_url %>" width="25px"alt="Card image cap">
   <div class="card-body">
      <h5 class="card-title"><%= business.business_name %></h5>
-     <p class="card-text"> <%=business.category%> </p>
+    <div class=" card-text p-3 mb-2 bg-secondary text-white"><%=business.category%></div>
     <p class="card-text"> <%=business.one_liner%> <p> <strong>Liked by:</strong> <%= business.likes.count %> <p></p>
 
       <%= link_to "More info", business, class:"btn btn-dark" %>

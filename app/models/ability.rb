@@ -21,6 +21,13 @@ class Ability
       user == business.user
     end
 
+    can :crud, Classified do |classified|
+      user == classified.user
+    end
+
+    can :crud, Market do |market|
+      user == market.user
+    end
 
     # can :crud, Answer do |answer|
     #   user == answer.user #|| answer.question.user

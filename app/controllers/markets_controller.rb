@@ -1,6 +1,10 @@
 class MarketsController < ApplicationController
   before_action :set_market, only: %i[ show edit update destroy ]
 
+  before_action :authenticate_user!, except: [:index, :show]
+
+  before_action :authorize_user!, only:[:edit, :update, :destroy]
+
   # GET /markets or /markets.json
   def index
     # @markets = Market.all
@@ -25,6 +29,7 @@ class MarketsController < ApplicationController
   # POST /markets or /markets.json
   def create
     @market = Market.new(market_params)
+    @market.user = current_user
 
     respond_to do |format|
       if @market.save
@@ -69,5 +74,9 @@ class MarketsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def market_params
       params.require(:market).permit(:title, :description, :address, :start_time, :end_time)
+    end
+
+    def authorize_user!
+      redirect_to root_path, alert: "Not authorized!" unless can?(:crud, @market)
     end
 end
