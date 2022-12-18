@@ -1,0 +1,42 @@
+<%= form_with(model: classified) do |form| %>
+  <% if classified.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(classified.errors.count, "error") %> prohibited this classified from being saved:</h2>
+
+      <ul>
+        <% classified.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+ <div class="form-group">
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category, ['Paid Job','Paid Gig','Volunteer Position','Buy','Sell','Contest Collaboration' , 'Other'] %>
+  </div>
+
+  <div>
+    <%= form.label :contact_info, style: "display: block" %>
+    <%= form.text_field :contact_info %>
+  </div>
+
+  <div>
+    <%= form.label :image_url, style: "display: block" %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

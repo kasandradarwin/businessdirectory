@@ -56,11 +56,23 @@
     </li>
 
        <%=  link_to "Businesses", root_path, class: "dropdown-menu" %>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            Classifieds
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="<%= classifieds_path %>">View Classified Ads</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="<%= new_classified_path %>">Add Classified Ad</a></li>
+          </ul>
+    </li>
         <%= button_to "Logout", session_path, method: :delete,
             data: {confirm: "are you sure you want to log out?"}, class: 'btn btn-default nav-link'%>
   <% else %>
         <%= link_to "Home", root_path, class: "nav-item nav-link" %>
         <%= link_to "Upcoming Markets", markets_path, class: "nav-item nav-link" %>
+        <%=  link_to "Classifieds", classifieds_path, class: "nav-item nav-link" %>
         <%= link_to "Login", new_session_path, class: "nav-item nav-link" %> 
         <%= link_to "Sign Up", new_user_path, class: "nav-item nav-link" %>
     <% end %>

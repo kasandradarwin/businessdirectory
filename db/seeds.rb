@@ -1,23 +1,25 @@
 Like.destroy_all
 User.destroy_all
 Market.destroy_all
+Classified.destroy_all
+
 
 PASSWORD = "password123"
 
-super_user = User.create(
-    first_name: "Admin",
-    last_name: "User",
-    email: "admin@user.com",
-    password: PASSWORD,
-    # admin?: true
-)
+# super_user = User.create(
+#     first_name: "Admin",
+#     last_name: "User",
+#     email: "admin@user.com",
+#     password: PASSWORD,
+#     # admin?: true
+# )
 
 10.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
     User.create(
-    first_name: "Sarah",
-    last_name: "Finnley",
+    first_name: first_name,
+    last_name: last_name,
     email: "#{first_name}@#{last_name}.com",
     password: PASSWORD,
     # admin?: false
@@ -351,9 +353,11 @@ Market.create([{
     We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
     
     The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
-    address: "Commerical Street",
+    address: "Commercial Street",
     start_time: "Thu, 22 Dec 2022 16:00:00.000000000 UTC +00:00",
     end_time: "Fri, 23 Dec 2022 16:00:00.000000000 UTC +00:00",
+    user: users.sample,
+
        
 },
 {
@@ -371,6 +375,8 @@ The Commercial Street Night Market is located on the traditional, unceded territ
 address: "Commerical Street",
 start_time: "Fri, 23 Dec 2022 16:00:00.000000000 UTC +00:00",
 end_time: "Sun, 25 Dec 2022 16:00:00.000000000 UTC +00:00",
+user: users.sample,
+
    
 },
 {
@@ -388,6 +394,8 @@ The Commercial Street Night Market is located on the traditional, unceded territ
 address: "Commerical Street",
 start_time: "Mon, 26 Dec 2022 16:00:00.000000000 UTC +00:00",
     end_time: "Mon, 26 Dec 2022 19:00:00.000000000 UTC +00:00",
+    user: users.sample,
+
    
 },
 {
@@ -405,14 +413,148 @@ The Commercial Street Night Market is located on the traditional, unceded territ
 address: "Commerical Street",
 start_time: "Wed, 28 Dec 2022 16:00:00.000000000 UTC +00:00",
 end_time: "Wed, 28 Dec 2022 19:00:00.000000000 UTC +00:00",
+user: users.sample,
    
 },
 
+{
+
+title: "Mid-Week Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Wed, 04 Jan 2023 16:00:00.000000000 UTC +00:00",
+end_time: "Wed, 04 Jan 2023 19:00:00.000000000 UTC +00:00",
+user: users.sample,
+   
+},
+
+{
+
+title: "Mid-Week Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Wed, 11 Jan 2023 16:00:00.000000000 UTC +00:00",
+end_time: "Wed, 11 Jan 2023 19:00:00.000000000 UTC +00:00",
+user: users.sample,
+   
+},
+
+{
+
+title: "Mid-Week Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Wed, 18 Jan 2023 16:00:00.000000000 UTC +00:00",
+end_time: "Wed, 18 Jan 2023 19:00:00.000000000 UTC +00:00",
+user: users.sample,
+},
+
+{
+
+title: "Mid-Week Market",
+description: "The Commercial Street Night Market brings life, colour and the sounds of summer to downtown Nanaimo. Over 11 weeks, the Market will host nearly 200 artisan vendors, more than a dozen food trucks, 50-60 musical entertainers, and a kids’ zone creating a festive family vibe. Weekly entertainment features include Romper Room Climbing Wall, Face Painting, Craig the Magician, Akron the Barbarian, Playbriola, CHLY DJ Booth, Funkanometry, Ice Carving, and more exciting surprises.
+
+The Night Market was created to bring locals and tourists into the heart of our city to showcase our local restaurants and businesses. The artisan vendors help demonstrate the creative community you’ll find in the mid-Island.
+
+This year, we offer complimentary Park N’ Ride bus service in partnership with BC Transit and North Town Centre. Buses leave North Town’s parking lot (by Montana’s) every hour starting at 4:30 and return on the hour.
+
+We’ve also introduced a free and secure Bike Valet Service in collaboration with Hub City Cycles Community Co-op. The compound is on Wharf Street just below Commercial Street.
+
+The Commercial Street Night Market is located on the traditional, unceded territory of Snuneymuxw First Nation and we pay respect for the opportunity to live, work, and host this event on their land.",
+address: "Commerical Street",
+start_time: "Wed, 25 Jan 2023 16:00:00.000000000 UTC +00:00",
+end_time: "Wed, 25 Jan 2023 19:00:00.000000000 UTC +00:00",
+user: users.sample,
+   
+},
 
 ])
+
+Classified.create!([{
+
+    title: "Looking to collab on an instagram giveaway",
+    category: "Contest Collaboration",
+    description: "Hey fellow makers! I am the owner of LOJO Undies, and I'm looking for some collaborators to participate in an instagram giveaway with me",
+    contact_info: " Call me - 867-5309",
+    user: users.sample, 
+},
+{
+    title: "Christmas Order Help",
+    category: "Paid Job",
+    description: "Hey fellow makers! I'm looking for a little extra help packaging orders this Christmas season, will pay $20 per hour, approximately 10 hours per week",
+    contact_info: " text me - 867-5309",
+    user: users.sample, 
+       
+},
+{
+    title: "Market booth attendant",
+    category: "Paid Gig",
+    description: "Hey Fellow Makers! I signed up for a market the weekend of January 15th, but I double-booked! I'm looking for someone to sub in for me. Will provide paid training probably 10 hours in total at $25 per hour. May be opportunity for future work.",
+    contact_info: "Email me - info@lojoundies.com", 
+    user: users.sample, 
+},
+{
+    title: "Looking to collab on an instagram giveaway for Valentines day",
+    category: "Contest Collaboration",
+    description: "Hey fellow makers! I am the owner of LOJO Undies, and I'm looking for some collaborators to participate in an instagram giveaway with me",
+    contact_info: " Call me - 867-5309", 
+    user: users.sample, 
+},
+{
+    title: "Overstock",
+    category: "Sell",
+    description: "Hey Fellow Makers! I accidentally made way too much skin cream, and I'm looking to sell it at a discounted rate. Please email for more details",
+    contact_info: " Call me - 867-5309",
+    user: users.sample, 
+       
+},
+{
+    title: "Extra Set of Hands for Market",
+    category: "Paid Gig",
+    description: "Hey fellow makers! I'm looking for an extra pair of hands for the Commercial street night market next weekend, $16 an hour, probably 10 hours in total.",
+    contact_info: " Text me - 867-5309",
+    user: users.sample, 
+       
+}])
 
     # b.likers = users.shuffle.slice(0, rand(users.count))
 
 
+markets = Market.all
 businesses = Business.all
+classifieds = Classified.all
+puts markets.errors.full_messages
+puts "****************************************"
+puts businesses.errors.full_messages
+puts "****************************************"
+puts classifiedss.errors.full_messages
+
+
+
+
+
 

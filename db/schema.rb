@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_14_035223) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_18_215101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +30,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_035223) do
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
+  create_table "classifieds", force: :cascade do |t|
+    t.string "title"
+    t.string "category"
+    t.string "contact_info"
+    t.string "image_url"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_classifieds_on_user_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "business_id", null: false
@@ -47,6 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_035223) do
     t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_markets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,6 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_035223) do
   end
 
   add_foreign_key "businesses", "users"
+  add_foreign_key "classifieds", "users"
   add_foreign_key "likes", "businesses"
   add_foreign_key "likes", "users"
+  add_foreign_key "markets", "users"
 end
