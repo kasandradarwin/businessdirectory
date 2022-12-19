@@ -14,16 +14,13 @@
 <% end %>
 
 
-
+<p> <%= @spotlight.first.business_name %> </p>
 <h1>Nanaimo Businesses</h1>
   <span> Sort by:  </span>
     <span><%= sort_link(@q, :category, "Category", default_order: :asc) %></span> <span> |  </span>
      <span><%= sort_link(@q, :business_name, "Business Name", default_order: :asc) %> </span>
      <span> |  </span> <span><%= sort_link(@q, :likes, "Number of Likes", default_order: :desc) %></span>
     
-
-
-
 
 
 <div class="businesses container-fluid ">
@@ -46,6 +43,8 @@
 </div>
 </div>
 </div>
+
+
 
 
 

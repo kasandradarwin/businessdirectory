@@ -8,15 +8,12 @@ class BusinessesController < ApplicationController
   # GET /businesses or /businesses.json
   def index
     @businesses = Business.all
-      #  @keyword = params[:q].values[0]
+    @spotlight = Business.offset(rand(Business.count - 3)).limit(3)
+    
         @q = Business.ransack(params[:q])
         @businesses = @q.result(distinct: true)
-    
-      # @q = Business.ransack(params[:q])
-      # @businesses = @q.result.includes(:businesses).page(params[:page])
-    
-    # @likes = @business.likes.find_by(user: current_user)
-    # @like = @business.likes.find_by(user: current_user)
+        # @likes = @q.result(distinct: true)
+
     
 
   end
