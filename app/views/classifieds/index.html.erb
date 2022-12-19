@@ -27,6 +27,9 @@
     
 
     <div class="card text-center" style="width: 18rem;">
+      <div class="badge bg-secondary text-wrap text-uppercase" style="width: 9rem;">
+         <%=classfied.category%>
+      </div>
 
     <% if (classfied.image_url) %>
   <img class="card-img-top img-thumbnail" src="<%= classfied.image_url %>" width="25px"alt="Card image cap">
@@ -34,9 +37,8 @@
 
   <div class="card-body">
      <h5 class="card-title"><%= classfied.title %></h5>
-     <div class=" card-text p-3 mb-2 bg-secondary text-white"><%=classfied.category%></div>
    
-    <p class="card-text"> <%=classfied.description.truncate(50)%> </p>
+    <p class="card-text"> <%=classfied.description.truncate(200)%> </p>
 
       <%= link_to "View this ad", classfied, class:"btn btn-outline-dark" %>
   </div>
