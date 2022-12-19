@@ -2,40 +2,44 @@
 
 
 <div class="container">
-<div class ="container mt-5 text-center">
+<div class ="container mt-5 text-left">
 <br />
 
 <h3> <%= @classified.title  %> </h3>
-<small> Posted by:  <%= @classified.user.first_name  %> </small>
-<br />
-
-<img src="<%=@classified.image_url%>" width="200">
-<br />
-<br />
-
-
-
-<div class="container clearfix border">
-  <div class="row">
-    <div class="col-4">
-
-     <div class="row border">
-    <div class="col-4"><strong>Category:</strong> </div>
-    <div class="col-8"><%= @classified.category %></div>
+<small> Posted by:  <%= @classified.user.full_name  %> </small>
+  <br />
+  <br />
+  <div class="badge bg-secondary text-wrap text-uppercase" style="width: 9rem;">
+      <%=@classified.category%>
   </div>
+<br />
 
 
-  <div class="row border">
-    <div class="col-4"><strong>Contact Info</strong></div>
-    <div class="col-8"><%= @classified.contact_info %></div>
-  </div>
 
+<% if(@classified.image_url)%>
+  <img src="<%=@classified.image_url%>" width="200">
+  <br />
+  <br />
+<% end%>
+
+
+ 
+
+
+<div class="container">
+  <div>
+    <div>
+ 
+  
 <br />
 <br />
 
     </div>
-    <div class="col-12"><strong>More about this ad <br /> <br /> </strong> <%= @classified.description %></div>
-
+    <div class="shadow p-3 mb-5 bg-body rounded"> <%= @classified.description %> --
+  <%=@classified.user.first_name%>
+    
+    <div> <strong>To reply to this ad:</strong> <%= @classified.contact_info %></div>
+    </div>
   </div>
 </div>
 
@@ -44,14 +48,15 @@
 <br />
 <br />
   <%= link_to "Back to Classifieds", classifieds_path, class: "btn btn-dark" %>
-
+<br />
+<br />
 </div>
 
 <div>
-<% if can? :crud, @classified %>
-  <%= link_to "Edit this Ad", edit_classified_path(@classified), class: 'btn btn-outline-dark' %> 
-<% end %>
-<% if current_user == @classified.user %>
-  <%= button_to "Delete this Ad", @classified, method: :delete, class: 'btn btn-outline-danger' %>
-<%end %>
+  <% if can? :crud, @classified %>
+    <%= link_to "Edit this Ad", edit_classified_path(@classified), class: 'btn btn-outline-dark' %> 
+  <% end %>
+  <% if current_user == @classified.user %>
+    <%= button_to "Delete this Ad", @classified, method: :delete, class: 'btn btn-outline-danger' %>
+  <%end %>
 </div>

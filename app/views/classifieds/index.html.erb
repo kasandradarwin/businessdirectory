@@ -23,24 +23,24 @@
 
 <div class="classfieds container-fluid ">
   <div class="row row-cols-12 row-cols-md-6 row-cols-lg-4 justify-content-center">
-  <% @classifieds.each do |classfied| %>
+  <% @classifieds.each do |classified| %>
     
 
     <div class="card text-center" style="width: 18rem;">
       <div class="badge bg-secondary text-wrap text-uppercase" style="width: 9rem;">
-         <%=classfied.category%>
+         <%=classified.category%>
       </div>
 
-    <% if (classfied.image_url) %>
-  <img class="card-img-top img-thumbnail" src="<%= classfied.image_url %>" width="25px"alt="Card image cap">
+    <% if (classified.image_url) %>
+  <img class="card-img-top img-thumbnail" src="<%= classified.image_url %>" width="25px"alt="Card image cap">
   <% end %>
 
   <div class="card-body">
-     <h5 class="card-title"><%= classfied.title %></h5>
+     <h5 class="card-title"><%= classified.title %></h5>
    
-    <p class="card-text"> <%=classfied.description.truncate(200)%> </p>
+    <p class="card-text"> <%=classified.description.truncate(200)%> </p>
 
-      <%= link_to "View this ad", classfied, class:"btn btn-outline-dark" %>
+      <%= link_to "View this ad", classified, class:"btn btn-outline-dark" %>
   </div>
 </div>
     
