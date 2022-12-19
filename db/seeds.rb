@@ -50,7 +50,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/a35cd0f8-4cf5-4bd4-b084-3d1cd6935dfd/Marja+sample+thank+you+card+%2821+x+24+in%29-4-min.png",
-
+        spotlight_photo: "https://images.squarespace-cdn.com/content/v1/5baaed5577b903135793f279/1644082542189-25LMY3FA0LEY87DI8GCO/product+sets+%281+of+2%29.jpg",
 },
     {
         business_name: "Basic Batches Bagels",
@@ -65,6 +65,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://handletheheat.com/wp-content/uploads/2016/08/how-to-make-bagels-recipe-SQUARE.jpg",
+        spotlight_photo:"https://handletheheat.com/wp-content/uploads/2016/08/how-to-make-bagels-recipe-SQUARE.jpg",
     },
 
     {
@@ -86,7 +87,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://images.squarespace-cdn.com/content/v1/5df1c95f7cfa163022afff02/1577593626891-1471W9F1AWTJB27L6D8L/Copy%2Bof%2BWild.jpg",
-        
+        spotlight_photo:"https://images.squarespace-cdn.com/content/v1/5df1c95f7cfa163022afff02/1661740603152-CT706YU9B3DEQZ6C5H23/DSC_0759.jpg",
     },
 
     {
@@ -102,6 +103,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/0601/1122/5029/files/LOGO-LOJO-01_180x.png?v=1636309319",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/0601/1122/5029/files/LOGO-LOJO-01_180x.png?v=1636309319",
     },
 
     {
@@ -123,6 +125,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://images.squarespace-cdn.com/content/v1/5fd276beddcfa0625ddeafcd/2c823fb7-de82-46ef-b7f8-b981b50935df/logo+1.png?format=1500w",
+        spotlight_photo:"https://images.squarespace-cdn.com/content/v1/5fd276beddcfa0625ddeafcd/1648157197296-KYMV8MXB0W257GGLT3JQ/IMG-2122.jpeg",
     },
 
     {
@@ -142,6 +145,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/0252/6576/6463/files/Vancouver_Island_Sea_Salt_Logo_2_480x480.png?v=1605815404",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/1605/2033/products/VancouverIslandWhiskySmokedSeaSaltonSwitchGroceryCanada_1600x.jpg?v=1592926856",
     },
 
     {
@@ -157,6 +161,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/1034/2373/t/2/assets/logo.png?v=29851833800031242781445543693",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/1034/2373/products/DSC_0785_grande.jpg?v=1589243584",
     },
 
     {
@@ -179,6 +184,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/1786/0595/files/True_Grain_Logo_Black_300x147.png?v=1620156074",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/1786/0595/files/Multi_hearth_480x480.jpg?v=1623868162",
     },
 
     {
@@ -194,6 +200,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cowichancream.ca/sitepad-data/uploads/2021/12/logo-symbol.png",
+        spotlight_photo:"https://cowichancream.ca/sitepad-data/uploads/2022/12/prevost.jpg",
     },
 
     {
@@ -210,6 +217,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://static.wixstatic.com/media/0a71bb_1f35303293384ccf8e7d710b486eafdb~mv2.png/v1/fill/w_548,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ORGANIC-PVF-Logo-BlackTransperent.png",
+        spotlight_photo:"https://static.wixstatic.com/media/0a71bb_9e117234672a473ba2d889b4cd318edf~mv2.jpg/v1/fill/w_980,h_1686,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0a71bb_9e117234672a473ba2d889b4cd318edf~mv2.jpg",
     },
     {
         business_name: "Westwood Leather",
@@ -230,7 +238,8 @@ users = User.all
         created_at: created_at,
         updated_at: created_at,
         user: users.sample, 
-        logo_url: "https://cdn.shopify.com/s/files/1/0531/4369/9646/files/Westwood_Logotype_-_White_200px-03.png?v=1634249482",
+        logo_url: "https://scontent.fyvr1-1.fna.fbcdn.net/v/t39.30808-6/305574680_425215613043967_8131444453552406170_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ht7-M-0snTgAX9DidOU&_nc_ht=scontent.fyvr1-1.fna&oh=00_AfDouA5h_nyPgoJwQyNFezRAL5CByDUZXXdfRgmtxbCQcA&oe=63A49746",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/0531/4369/9646/products/WestwoodLeatherCo-NaturalCardholder-Straightcopy.jpg?v=1658250612&width=713",
     },
     {
         business_name: "Drumroaster Coffee",
@@ -248,7 +257,8 @@ users = User.all
         created_at: created_at,
         updated_at: created_at,
         user: users.sample, 
-        logo_url: "https://images.squarespace-cdn.com/content/v1/551b257ee4b072084061481f/1585604321862-QDISHN74NPLUP6TWVQ2M/spromo.png?format=1000w",
+        logo_url: "https://cdn.shopify.com/s/files/1/0330/7333/files/drumroasterlogo_large.jpg?v=1496943864",
+        spotlight_photo:"https://images.squarespace-cdn.com/content/v1/551b257ee4b072084061481f/1628626345109-JQLS93KMCIESFI1BGX5N/DRM_8510.jpg",
     },
 
     {
@@ -264,6 +274,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://static.wixstatic.com/media/a4386e_f9b402b4b13e4049b791d185a47799ca~mv2.png/v1/fill/w_446,h_258,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/HUDDY-buddies-blk-frame.png",
+        spotlight_photo:"https://static.wixstatic.com/media/a4386e_f7039bd284994197b97ef2a39daa9e55~mv2.jpg/v1/fill/w_1254,h_890,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a4386e_f7039bd284994197b97ef2a39daa9e55~mv2.jpg",
     },
     
     {
@@ -285,6 +296,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://cdn.shopify.com/s/files/1/0578/6396/2796/files/7df6c0_b8d5ee190f7e404aa930ea69d0f6132b_mv2_d_5400_5400_s_4_2.png?v=1627356694",
+        spotlight_photo:"https://cdn.shopify.com/s/files/1/0578/6396/2796/products/sassy-tomato-mexican-salsa_576x.jpg?v=1652321736",
     },
     {
         business_name: "Woodfire Spice",
@@ -317,7 +329,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://www.woodfirerestaurant.ca/wp-content/uploads/2022/11/woodfire_spices_logo_cmyk-300x300.png",
-
+        spotlight_photo:"https://www.woodfirerestaurant.ca/wp-content/uploads/2022/08/CM2A8200_websize.jpg",
     },
     {
         business_name: "Yeshi Dressing",
@@ -336,7 +348,7 @@ users = User.all
         updated_at: created_at,
         user: users.sample, 
         logo_url: "https://yeshidressing.com/wp-content/uploads/2021/08/logo-green.svg",
-
+        spotlight_photo:"https://yeshidressing.com/wp-content/uploads/2021/08/P9220305-300x225.jpg",
     },
 ])
 

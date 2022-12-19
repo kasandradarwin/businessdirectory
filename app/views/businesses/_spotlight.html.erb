@@ -5,8 +5,16 @@
   <h1 class="display-5">Spotlight on: <span class="text-secondary"><%= @spotlight.first.business_name %> </span> </h1>
   <div class="container-sm clearfix">
   
-  <img class="card-img-top col-md-6 float-md-start mb-3 ms-md-3 mx-3" src="<%= @spotlight.first.logo_url %>"
-style="max-width:200px" alt="Card image cap">
+  <% if (@spotlight.first.spotlight_photo) %>
+  <img class="card-img-top col-md-6 float-md-start mb-3 ms-md-3 mx-3" src="<%= @spotlight.first.spotlight_photo %>"
+style="max-width:300px" alt="Card image cap">
+<% else %>
+ <img class="card-img-top col-md-6 float-md-start mb-3 ms-md-3 mx-3" src="<%= @spotlight.first.logo_url %>"
+style="max-width:300px" alt="Card image cap">
+<% end %>
+
+
+
 <div class="container justify-center">
 <div class="container">
   <p class="lead "><%= @spotlight.first.description.truncate(300) %></p>
