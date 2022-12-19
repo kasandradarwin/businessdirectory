@@ -2,63 +2,29 @@
 
 
 <div class="container">
-<div class ="container mt-5 text-center">
+<div class ="container mt-5 text-left">
 <br />
 
-<h3><%= @business.business_name  %> </h3>
-<br />
-
-<img src="<%=@business.logo_url%>" width="200">
-<br />
-<br />
-
-
-
-<div class="container clearfix border">
-  <div class="row">
-    <div class="col-5">
-
-     <div class="row border">
-    <div class="col-3"><strong>Category:</strong> </div>
-    <div class="col-9"><%= @business.category %></div>
+<h3> <%=  @business.business_name %> </h3>
+<small> Business Owner:  <%= @business.user.full_name  %> </small>
+  <br />
+  <br />
+  <div class="badge bg-secondary text-wrap text-uppercase" style="width: 9rem;">
+      <%=@business.category%>
   </div>
-
-    <div class="row border">
-    <div class="col-3"><strong>One-liner:</strong></div>
-    <div class="col-9"><%= @business.one_liner %></div>
-  </div>
-
-  <div class="row border">
-    <div class="col-3"><strong>Email</strong></div>
-    <div class="col-9"><%= @business.business_email %></div>
-  </div>
-
-
-  <div class="row border">
-    <div class="col-3"><strong>Phone:</strong></div>
-    <div class="col-9"><%= @business.business_phone %></div>
-  </div>
-
-
-    </div>
-    <div class="col-7"><strong>More about <%= @business.business_name  %> <br /> <br /> </strong> <%= @business.description %></div>
-
-  </div>
-</div>
-
-
-
-
-<br />
-<% if (@business.shop_online)  %>
- <%= link_to 'Shop Online', (@business.website), class: 'btn btn-dark' %>
-<%  else %>
-<p> Contact to Order </p>
-<%  end %>
-
-<br />
 <br />
  <small>Liked by: <%= @business.likes.count %> users</small>
+ <br />
+
+
+
+<% if(@business.logo_url)%>
+  <img src="<%=@business.logo_url%>" width="200" >
+  <br />
+  <br />
+<% end%>
+
+<br />
 <div class="container">
 <small>
   <% if @like.present? %>
@@ -68,6 +34,40 @@
     <% end %>
 </small>
 </div>
+ 
+
+
+<div class="container">
+  <div>
+    <div>
+ 
+  
+<br />
+<br />
+
+    </div>
+    
+    <div class="shadow p-3 mb-5 bg-body rounded"> 
+    <strong>More about <%= @business.business_name  %> <br /> <br /> </strong> <%= @business.description %>
+    
+    <div> <br /> <strong>Category:</strong> <%= @business.category %></div>
+    <div> <br /> <strong>One-liner:</strong> <%= @business.one_liner %></div>
+    <div> <br /> <strong>Email:</strong> <%= @business.business_email %></div>
+    <div> <br /> <strong>Phone:</strong> <%= @business.business_phone %></div>
+    </div>
+  </div>
+</div>
+
+
+
+<% if (@business.shop_online)  %>
+ <%= link_to 'Shop Online', (@business.website), class: 'btn btn-dark' %>
+<%  else %>
+<p> Contact to Order </p>
+<%  end %>
+
+<br />
+<br />
 
 </div>
 
