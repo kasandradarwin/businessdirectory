@@ -16,7 +16,7 @@
 
   <div class="form-group">
     <%= form.label :business_name, style: "display: block" %>
-    <%= form.text_field :business_name %>
+    <%= form.text_field :business_name, placeholder: "LOJO Undies" %>
   </div>
 
   <div class="form-group">
@@ -26,27 +26,32 @@
 
   <div class="form-group">
     <%= form.label :one_liner, style: "display: block" %>
-    <%= form.text_field :one_liner %>
+    <%= form.text_field :one_liner, placeholder: "Breathable Undies, design, cut, and sewn in BC!" %>
   </div>
 
   <div class="form-group">
     <%= form.label :business_email, style: "display: block" %>
-    <%= form.text_field :business_email %>
+    <%= form.text_field :business_email, placeholder: "info@lojoundies.com" %>
   </div>
 
   <div class="form-group">
     <%= form.label :business_phone, style: "display: block" %>
-    <%= form.text_field :business_phone %>
+    <%= form.text_field :business_phone, placeholder: "250-867-5309" %>
   </div>
 
   <div class="form-group">
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, placeholder: "Enter a longer description, origins, mission, etc" %>
   </div>
 
   <div class="form-group">
     <%= form.label :logo_url, style: "display: block" %>
-    <%= form.text_field :logo_url %>
+    <%= form.text_field :logo_url, placeholder: "https://cdn.shopify.com/s/files/1/0601/1122/5029/files/LOGO-LOJO-01_180x.png?v=1636309319" %>
+  </div>
+
+    <div class="form-group">
+    <%= form.label :spotlight_photo, style: "display: block" %>
+    <%= form.text_field :spotlight_photo, placeholder:"Link your fave product photo" %>
   </div>
 
   <div class="form-group">
@@ -56,7 +61,7 @@
 
   <div class="form-group">
     <%= form.label :website, style: "display: block" %>
-    <%= form.text_field :website %>
+    <%= form.text_field :website, placeholder: "lojoundies.com/shop" %>
   </div>
 
   <div class="form-group">
