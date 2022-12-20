@@ -1,5 +1,4 @@
 
-<p style="color: green"><%= notice %></p>
 <div class="container">
 
 <% if %>
@@ -7,33 +6,33 @@
 <% end %>
 
 
-
 <h1>Nanaimo Businesses</h1>
 <%= search_form_for @q do |f| %>
   <% f.label :business_name_or_description_or_category_cont %>
   <%= f.search_field :business_name_or_description_or_category_cont %>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-dark btn-sm" %>
 <% end %>
+<br />
   <span> Sort by:  </span>
-    <span><%= sort_link(@q, :category, "Category", default_order: :asc) %></span> <span> |  </span>
-     <span><%= sort_link(@q, :business_name, "Business Name", default_order: :asc) %> </span>
-     <span> |  </span> <span><%= sort_link(@q, :likes, "Number of Likes", default_order: :desc) %></span>
-    
+    <span><%= sort_link(@q, :category, "Category", default_order: :asc, class: "btn btn-dark btn-sm") %></span> <span> |  </span>
+     <span><%= sort_link(@q, :business_name, "Alphabetical", default_order: :asc, class: "btn btn-dark btn-sm") %> </span>
+     <span> |  </span> <span><%= sort_link(@q, :business_id_likes_count, "Number of Likes", default_order: :asc, class: "btn btn-dark btn-sm") %></span>
+  <hr />
 <div class="businesses container-fluid ">
 
 <br />
     <div class="row row-cols-12 row-cols-md-6 row-cols-lg-4 justify-content-center">
         <% @businesses.each do |business| %>
       <div class="card text-center" style="width: 18rem;">
-      <div class="badge bg-secondary text-wrap text-uppercase" style="width: 6rem;">
+      <div class="badge bg-secondary text-wrap text-uppercase" style="width: 6rem, justify-end">
          <%=business.category%>
       </div>
        <img class="card-img-top img-thumbnail" src="<%= business.logo_url %>" width="25px"alt="Card image cap">
-  <div class="container float-bottom">
+  <div class="container">
       <div class="card-body">
         <h5 class="card-title"><%= business.business_name %></h5>
         <p class="card-text"> <%=business.one_liner%> <p> <strong>Liked by:</strong> <%= business.likes.count %> </p>
-          <%= link_to "More info", business, class:"btn btn-dark" %>
+          <%= link_to "More info", business, class:"btn btn-dark", style:"justify-bottom;" %>
       </div>
   </div>
   </div>

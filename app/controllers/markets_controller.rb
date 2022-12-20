@@ -31,6 +31,9 @@ class MarketsController < ApplicationController
     @market = Market.new(market_params)
     @market.user = current_user
 
+    p @market
+    p @market.user
+
     respond_to do |format|
       if @market.save
         format.html { redirect_to market_url(@market), notice: "Market was successfully created." }

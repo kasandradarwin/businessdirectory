@@ -1,9 +1,12 @@
+
+
 <h1>Create a new account </h1>
 
 
 <% if @user.errors.any? %>
     <p><%= @user.errors.full_messages.join(', ') %></p>
 <% end %>
+
 <%= form_with model: @user do |f| %>
     <div>
         <%= f.label :first_name %>
@@ -28,3 +31,6 @@
     <br />
     <%= f.submit "Sign Up",  class:"btn btn-dark" %>
 <% end %>
+
+
+

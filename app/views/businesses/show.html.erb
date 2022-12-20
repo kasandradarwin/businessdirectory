@@ -1,34 +1,28 @@
-<p style="color: green"><%= notice %></p>
-
 
 <div class="container">
-<div class ="container mt-5 text-left">
-<br />
-
-<h3> <%=  @business.business_name %> </h3>
-<small> Business Owner:  <%= @business.user.full_name  %> </small>
-  <br />
-  <br />
   <div class="badge bg-secondary text-wrap text-uppercase" style="width: 9rem;">
       <%=@business.category%>
+      <br />
   </div>
+  <div class="container text-center">
+    <% if(@business.logo_url)%>
+      <img src="<%=@business.logo_url%>" width="300" >
+      <br />
+      <br />
+    <% end%>
+<h1 class="text-secondary"><strong> <%=  @business.business_name %> </strong></h1>
+<small> Business Owner:  <%= @business.user.full_name  %> </small>
+<% if (@business.likes.count > 0) %>
 <br />
  <small>Liked by: <%= @business.likes.count %> users</small>
- <br />
-
-
-
-<% if(@business.logo_url)%>
-  <img src="<%=@business.logo_url%>" width="200" >
-  <br />
-  <br />
-<% end%>
-
-<br />
+ 
+<% end %>
+  </div>
+<div class ="container mt-5 text-left">
 <div class="container">
 <small>
   <% if @like.present? %>
-      <%= button_to "Liked ✅", like_path(@like), method: :delete, class: 'btn btn-outline-success btn-sm' %>
+      <%= button_to "Liked ✔️", like_path(@like), method: :delete, class: 'btn btn-outline-secondary btn-sm' %>
     <% else %>
       <%= button_to "👍 Like", business_likes_path(@business), method: :post, class: 'btn btn-outline-primary' %>
     <% end %>
@@ -47,12 +41,12 @@
 
     </div>
     
-    <div class="shadow p-3 mb-5 bg-body rounded"> 
-    <strong>More about <%= @business.business_name  %> <br /> <br /> </strong> <%= @business.description %>
+    <div class="shadow p-3 mb-5 bg-bodyrounded"> 
+    <strong>More about <span class="text-capitalize"><%= @business.business_name  %> </span> <br /> <br /> </strong> <%= @business.description %>
     
-    <div> <br /> <strong>Category:</strong> <%= @business.category %></div>
-    <div> <br /> <strong>One-liner:</strong> <%= @business.one_liner %></div>
-    <div> <br /> <strong>Email:</strong> <%= @business.business_email %></div>
+    <div class="text-capitalize"> <br /> <strong>Category:</strong> <%= @business.category %></div>
+    <div class="text-capitalize"> <br /> <strong>One-liner:</strong> <%= @business.one_liner %></div>
+    <div class="text-lowercase"> <br /> <strong>Email:</strong> <%= @business.business_email %></div>
     <div> <br /> <strong>Phone:</strong> <%= @business.business_phone %></div>
     </div>
   </div>
@@ -60,11 +54,12 @@
 
 
 
-<% if (@business.shop_online)  %>
- <%= link_to 'Shop Online', (@business.website), class: 'btn btn-dark' %>
-<%  else %>
-<p> Contact to Order </p>
-<%  end %>
+  <% if (@business.shop_online)  %>
+  <%= link_to 'Shop Online', (@business.website), class: 'btn btn-dark' %>
+  <%  else %>
+  <p> Contact to Order </p>
+  <%  end %>
+
 
 <br />
 <br />

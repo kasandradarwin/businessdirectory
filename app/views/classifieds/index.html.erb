@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="container">
 <h1>Classifieds</h1>
 
 
 <%= search_form_for @q do |f| %>
 
-  <%= f.label :title_or_description_or_category_cont %>
+  <% f.label :title_or_description_or_category_cont %>
   <%= f.search_field :title_or_description_or_category_cont %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-dark' %>
 <% end %>
 
 
@@ -17,6 +15,7 @@
     <span><%= sort_link(@q, :category, "Category", default_order: :asc) %></span> <span> |  </span>
      <span><%= sort_link(@q, :title, "Alphabetical", default_order: :asc) %> </span>
   
+  <hr />
 
 
 

@@ -1,5 +1,5 @@
 class BusinessesController < ApplicationController
-  before_action :set_business, only: %i[ show edit update destroy ]
+  before_action :set_business, only:[:show, :edit, :update, :destroy]
 
   before_action :authenticate_user!, except: [:index, :show]
 
@@ -7,10 +7,15 @@ class BusinessesController < ApplicationController
 
   # GET /businesses or /businesses.json
   def index
-    @businesses = Business.all
+    # @businesses = Business.all
+    #  @likes = Like.group(:business_id)
+    #  @likes = Like.group(:business)
+    #  @likes = Like.joins(:businesses).count(group: "@likes.business_id")
     @spotlight = Business.offset(rand(Business.count - 3)).limit(3)
+   
     
         @q = Business.ransack(params[:q])
+        # @q = Likes.ransack(params[:q])
         @businesses = @q.result(distinct: true)
         # @likes = @q.result(distinct: true)
 
@@ -22,6 +27,7 @@ class BusinessesController < ApplicationController
   def show
     # @likes = @business.likes.find_by(user: current_user)
     @like = @business.likes.find_by(user: current_user)
+    p @business.id
   end
 
   # GET /businesses/new
@@ -80,7 +86,12 @@ class BusinessesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_business
+      p "******************* set business method before"
+      p params
       @business = Business.find(params[:id])
+
+      p "******************* set business method after"
+
     end
 
     # Only allow a list of trusted parameters through.

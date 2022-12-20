@@ -16,7 +16,7 @@
     <%= form.text_field :title %>
   </div>
 
- <div class="form-group">
+ <div>
     <%= form.label :category, style: "display: block" %>
     <%= form.select :category, ['Paid Job','Paid Gig','Volunteer Position','Buy','Sell','Contest Collaboration' , 'Other'] %>
   </div>
@@ -37,6 +37,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>
