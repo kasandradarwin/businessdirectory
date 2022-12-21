@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: local_business_directory_production
   username: local_business_directory
   password: <%= ENV["LOCAL_BUSINESS_DIRECTORY_DATABASE_PASSWORD"] %>
