@@ -2,14 +2,15 @@ databases:
   name: postgres
   ipAllowList: []
 
-
 services:
-  type: web
-  name: rails
-  env: ruby
-  buildCommand: "./bin/render.build.sh"
-  startCommand: "bundle exec puma -C config/puma.rb"
+ - type: pserv
+   name: pgbouncer
+   env: docker
+   plan: standard
+   repo: https://github.com/render-oss/docker-pgbouncer
   envVars:
+    buildCommand: "./bin/render.build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
     key: RAILS_MASTER_KEY
     sync: false
     key: DATABASE_URL
