@@ -16,7 +16,8 @@
   <span> Sort by:  </span>
     <span><%= sort_link(@q, :category, "Category", default_order: :asc, class: "btn btn-dark btn-sm") %></span> <span> |  </span>
      <span><%= sort_link(@q, :business_name, "Alphabetical", default_order: :asc, class: "btn btn-dark btn-sm") %> </span>
-     <span> |  </span> <span><%= sort_link(@q, :business_id_likes_count, "Number of Likes", default_order: :asc, class: "btn btn-dark btn-sm") %></span>
+     <span> |  </span> 
+     <span><%= sort_link(@q, :likes, "Number of Likes", default_order: :asc, class: "btn btn-dark btn-sm") %></span>
   <hr />
 <div class="businesses container-fluid ">
 

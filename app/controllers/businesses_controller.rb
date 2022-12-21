@@ -9,15 +9,22 @@ class BusinessesController < ApplicationController
   def index
     # @businesses = Business.all
     #  @likes = Like.group(:business_id)
-    #  @likes = Like.group(:business)
-    #  @likes = Like.joins(:businesses).count(group: "@likes.business_id")
+     @likes = Like.group(:business_id).count(:id)
+    #  @likes = Like.group(:businesses).count
     @spotlight = Business.offset(rand(Business.count - 3)).limit(3)
+    # @q = Business.all.joins(:likes).count(:business_id)
    
-    
+    #TESTING FOR LIKES:
+  #  @q = Business.select("businesses.*,count(likes.*) AS likes").joins("INNER JOIN likes ON business_id = likes.business_id").group("likes.business_id")
+
+        
+  
+        # @businesses = Business.all
+
+        #before:
         @q = Business.ransack(params[:q])
-        # @q = Likes.ransack(params[:q])
         @businesses = @q.result(distinct: true)
-        # @likes = @q.result(distinct: true)
+      
 
     
 
